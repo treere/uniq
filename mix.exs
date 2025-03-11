@@ -20,6 +20,10 @@ defmodule Uniq.MixProject do
       name: "Uniq",
       source_url: "https://github.com/bitwalker/uniq",
       homepage_url: "http://github.com/bitwalker/uniq",
+      dialyzer: [
+        # Put the project-level PLT in the priv/ directory (instead of the default _build/ location)
+        plt_file: {:no_warn, "priv/plts/project.plt"}
+      ],
       docs: [
         main: "readme",
         api_reference: false,
