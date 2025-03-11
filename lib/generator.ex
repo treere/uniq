@@ -31,7 +31,7 @@ defmodule Uniq.Generator do
 
     # Increment clock sequence if the timestamp has not changed
     if last_ts == current_ts do
-      # Always increment the clock to ensure concurrent accesses 
+      # Always increment the clock to ensure concurrent accesses
       # are unique for the same timestamp
       clock = :atomics.add_get(ref, @clock_index, 1)
 
